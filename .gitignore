@@ -1,2 +1,6 @@
 autobackup*
-
+logfile*
+logmaxf.txt
+logscc.txt
+vno_dir.ini
+vno_path.ini
