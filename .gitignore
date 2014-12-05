@@ -4,3 +4,10 @@ logmaxf.txt
 logscc.txt
 vno_dir.ini
 vno_path.ini
+
+# Latex stuff
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.synctex.gz
