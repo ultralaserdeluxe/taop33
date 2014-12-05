@@ -44,3 +44,32 @@ Problem saved Fri Dec 05 17:32:03 CET 2014 with 17 nodes and 37 links.
 
 Problem saved Fri Dec 05 17:32:03 CET 2014 with 17 nodes and 37 links.
 
+
+Problem saved Fri Dec 05 18:57:17 CET 2014 with 14 nodes and 34 links.
+
+Problem saved Fri Dec 05 18:57:17 CET 2014 with 14 nodes and 34 links.
+
+Problem saved Fri Dec 05 18:59:11 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 18:59:11 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 19:13:32 CET 2014 with 13 nodes and 33 links.
+
+Problem saved Fri Dec 05 19:13:32 CET 2014 with 13 nodes and 33 links.
+
+Problem saved Fri Dec 05 19:23:41 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 19:23:41 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 19:28:09 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 19:28:09 CET 2014 with 12 nodes and 32 links.
+
+Problem saved Fri Dec 05 19:34:14 CET 2014 with 14 nodes and 34 links.
+
+Problem saved Fri Dec 05 19:34:14 CET 2014 with 14 nodes and 34 links.
+
+Problem saved Fri Dec 05 19:35:58 CET 2014 with 14 nodes and 34 links.
+
+Problem saved Fri Dec 05 19:35:58 CET 2014 with 14 nodes and 34 links.
+
