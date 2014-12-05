@@ -1,0 +1,25 @@
+Total cost: -715
+Link flow:
+Link: (F1,L1): 	Flow: 20
+Link: (F1,L2): 	Flow: 110
+Link: (F1,L3): 	Flow: 20
+Link: (F2,L4): 	Flow: 80
+Link: (F2,L5): 	Flow: 16
+Link: (F2,T): 	Flow: 25
+Link: (F3,L5): 	Flow: 134
+Link: (F4,L1): 	Flow: 60
+Link: (L1,D): 	Flow: 80
+Link: (L2,D): 	Flow: 110
+Link: (L3,D): 	Flow: 45
+Link: (L4,D): 	Flow: 80
+Link: (L5,D): 	Flow: 150
+Link: (T,L3): 	Flow: 25
+Link: (S,F1): 	Flow: 150
+Link: (S,F2): 	Flow: 121
+Link: (S,F3): 	Flow: 134
+Link: (S,F4): 	Flow: 60
+Link: (S,1): 	Flow: 160
+Link: (2,D): 	Flow: 160
+Link: (1,2): 	Flow: 160
+
+
