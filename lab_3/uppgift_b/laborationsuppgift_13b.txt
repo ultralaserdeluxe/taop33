@@ -49,3 +49,16 @@ Problem saved Fri Dec 05 18:36:15 CET 2014 with 19 nodes and 41 links.
 
 Problem saved Fri Dec 05 18:36:15 CET 2014 with 19 nodes and 41 links.
 
+
+Problem saved Fri Dec 05 20:13:09 CET 2014 with 15 nodes and 33 links.
+
+Problem saved Fri Dec 05 20:13:09 CET 2014 with 15 nodes and 33 links.
+
+Problem saved Fri Dec 05 20:22:31 CET 2014 with 17 nodes and 39 links.
+
+Problem saved Fri Dec 05 20:22:31 CET 2014 with 17 nodes and 39 links.
+
+Problem saved Fri Dec 05 20:23:08 CET 2014 with 17 nodes and 39 links.
+
+Problem saved Fri Dec 05 20:23:08 CET 2014 with 17 nodes and 39 links.
+
