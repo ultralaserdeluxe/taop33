@@ -1,3 +1,4 @@
+# VINEOPT stuff
 autobackup*
 logfile*
 logmaxf.txt
@@ -8,3 +9,10 @@ vno_path.ini
 vno_recent.txt
 netin
 netout
+
+# Latex stuff
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.synctex.gz
