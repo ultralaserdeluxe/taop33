@@ -2,5 +2,9 @@ autobackup*
 logfile*
 logmaxf.txt
 logscc.txt
+logrelax.txt
 vno_dir.ini
 vno_path.ini
+vno_recent.txt
+netin
+netout
