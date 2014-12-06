@@ -70,7 +70,7 @@ Ett företag har fyra fabriker som producerar identiska varor. Produktionskostna
     \centering
     \begin{tabular}{ | l | l | l | l | l | }
         \hline
-        {\textbf{Fabrik}} & {F1} & {F2} & {F3} & {F4} \\\hline
+        {\textbf{Fabrik}} & {$F_{1}$} & {$F_{2}$} & {$F_{3}$} & {$F_{4}$} \\\hline
         {\textbf{Produktionskostnad} (kr/enhet)} & {25} & {27} & {26} & {28} \\\hline
         {\textbf{Maxkapacitet} (enheter)} & {150} & {200} & {175} & {100} \\\hline
     \end{tabular}
@@ -81,11 +81,11 @@ Ett företag har fyra fabriker som producerar identiska varor. Produktionskostna
     \centering
     \begin{tabular}{ | l | l | l | l | l | l | }
         \hline
-        {\textbf{Lager}} & {L1} & {L2} & {L3} & {L4} & {L5} \\\hline
+        {\textbf{Lager}} & {$L_{1}$} & {$L_{2}$} & {$L_{3}$} & {$L_{4}$} & {$L_{5}$} \\\hline
         {\textbf{Försäljningspris} (kr/enhet)} & {34} & {32} & {31} & {30} & {31} \\\hline
         {\textbf{Efterfrågan} (enheter)} & {80} & {110} & {150} & {100} & {150} \\\hline
     \end{tabular}
-    \caption{Lagrens egenskaper.} \label{lager-egenskaper}
+    \caption{Regionallagrens egenskaper.} \label{lager-egenskaper}
 \end{table}
 
 De tillverkade produkterna skall transporteras från fabrikerna till lagren till en kostnad angiven i tabell \ref{transportkostnader}.
@@ -116,7 +116,7 @@ Utöver de givna tabellerna finns det 5 givna villkor.
 
 \subsection{Deluppgift $a$}
 
-Planera företagets produktion och transport av varor så att stöarta möjliga vinst uppnås.
+Planera företagets produktion och transport av varor så att största möjliga vinst uppnås.
 
 \subsection{Deluppgift $b$}
 
@@ -124,7 +124,7 @@ Företaget gör en noggrannare analys av kostnadsstrukturen i fabrik 2. Man komm
 
 \subsection{Deluppgift $c$}
 
-En ny transportör erbjuder sig att transportera varor mellan fabrik 3 och lager 4. Vilket pris är det gösta företaget kan tänka sig att betala för att denna transport skall bli löande för företaget?
+En ny transportör erbjuder sig att transportera varor mellan fabrik 3 och lager 3. Vilket pris är det högsta företaget kan tänka sig att betala för att denna transport skall bli lönande för företaget?
 
 \section{Problemuppställning}
 
@@ -175,17 +175,17 @@ P - F + T = R
 
 Notera att vi använder kostnad, inte vinst i våra beräkningar vilket leder till att vinst representeras av ett negativt nummer. Alltså är de varor som transporteras via bågar med positiv kostnad i kostnadsmatrisen $R$ förlustaffärer.
 
-Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikrenas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten hos $S$.
+Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikrenas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten i $S$.
 
-Vi sätter de övre begränsningar på bågarna från $S$ till $F_{n}$ till fabrikernas maxkapacitet och de undre till 60 enligt bivillkor \ref{bivillkor4}. Vi sätter motsvarande begränsningar för lagren mellan $L_{n}$ och $D$.
+Vi sätter de övre begränsningar på bågarna från $S$ till $F_{n}$ till fabrikernas maxkapacitet och de undre till 60 enheter enligt villkor \ref{bivillkor4}. Vi sätter motsvarande begränsningar för lagren mellan $L_{n}$ och $D$.
 
-Noderna $1$ och $2$ är transportnoder och bågarna däremellan har en kostnad på 0. Det innebär att flödet går genom resten av grafen endast om det måste eller har en negativ kostnad enligt bivillkor \ref{bivillkor5}.
+Noderna $1$ och $2$ är slacknoder och bågarna däremellan har en kostnad på 0 kr. Det innebär att förutom det flöde som krävs för att uppfylla övriga villkor, kommer endast lönsamt flöde gå genom resten av grafen i enlighet med villkor \ref{bivillkor5}.
 
-Noden $T$ är ett substitut för en parallell båge och är det alternativa, billigare transportsättet mellan F2 och L3 givet i bivillkor \ref{bivillkor1}. Vi får kostnaden för den genom att beräkna $p_{2}-f_{3}+3$.
+Noden $T$ är ett substitut för en parallell båge och är det alternativa, billigare transportsättet mellan $F_{2}$ och $L_{3}$ givet i villkor \ref{bivillkor1}. Vi får kostnaden för den genom att beräkna $p_{2}-f_{3}+3$.
 
 \section{Lösning deluppgift $a$}
 
-För att ta reda på största möjliga vinst för företaget, löser vi den graf vi ritat upp. Lösningen illustreras i figur \ref{uppgifta-losning}. Svaret blir att största möjliga vinst är 715 kr. Det uppnås när flödet ser ut som i tabell \ref{uppgifta-flode}.
+För att ta reda på största möjliga vinst för företaget, löser vi den graf vi ritat upp. Lösningen illustreras i figur \ref{uppgifta-losning}. Svaret blir att största möjliga vinst är 715 kr med ettflöde enligt tabell \ref{uppgifta-flode}.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[scale=0.65]{laborationsuppgift_13a_solved.ps}}
@@ -209,7 +209,7 @@ För att ta reda på största möjliga vinst för företaget, löser vi den graf
 
 \section{Lösning deluppgift $b$}
 
-För att lösa uppgiften måste vi modifiera grafen. Vi lägger till noderna $F_{2a}$, $F_{2b}$ och $F_{2c}$ mellan $S$ och $F_{2}$. Vi ger bågarna mellan $F_{2}$ och de nya bågarna kostnader och gränser för maximalt och minimalt flöde enligt tabell \ref{uppgiftb-bagar}.
+För att lösa uppgiften måste vi modifiera grafen. Vi lägger till noderna $F_{2a}$, $F_{2b}$ och $F_{2c}$ mellan $S$ och $F_{2}$. Vi ger bågarna mellande nya noderna och $F_{2}$ kostnader och gränser för maximalt och minimalt flöde enligt tabell \ref{uppgiftb-bagar} för att uppfylla de nya villkoren.
 
 \begin{table}[h!]
     \centering
@@ -223,9 +223,9 @@ För att lösa uppgiften måste vi modifiera grafen. Vi lägger till noderna $F_
     \caption{Värden för nya bågar med $F_{2}$ som slutnod.} \label{uppgiftb-bagar}
 \end{table}
 
-\begin{figure}[h!] \label{uppgiftb-graf}
+\begin{figure}[h!]
 \centerline{\includegraphics[scale=0.65]{laborationsuppgift_13b_solved.ps}}
-\caption{Lösning deluppgift $b$}
+\caption{Lösning deluppgift $b$} \label{uppgiftb-graf}
 \end{figure}
 
 Vi löser sedan grafen och får ett resultat enligt figur \ref{uppgiftb-graf}. Lösningen ger en vinst på 865 kr med ett flöde enligt tabell \ref{uppgiftb-flode}.
@@ -245,7 +245,7 @@ Vi löser sedan grafen och får ett resultat enligt figur \ref{uppgiftb-graf}. L
 
 \section{Lösning deluppgift $c$}
 
-Genom att studera matrisen $R$ ser vi att kostnaden är $1$ kr/enhet för att producera, transportera och sälja en vara från $F_{3}$ till $L_{3}$. För att det ska vara lönsamt måste kostnaden vara $<0$ och alltså måste vi begära ett pris $<5$ kr/enhet.
+Genom att studera matrisen $R$ ser vi att kostnaden är $1$ kr/enhet för att producera, transportera och sälja en vara från $F_{3}$ till $L_{3}$. För att det ska vara lönsamt måste kostnaden vara $<0$ kr och alltså måste vi begära ett pris $<5$ kr/enhet.
 
 \newpage
 \begin{appendices}
