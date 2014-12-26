@@ -217,7 +217,18 @@ Vi löser sedan grafen och får ett resultat enligt figur \ref{uppgiftb-graf}. L
 \end{table}
 
 \section{Lösning deluppgift $c$}
-\todo{Lös med nodpriser!}\newline
-Genom att studera matrisen $R$ ser vi att kostnaden är $1$ kr/enhet för att producera, transportera och sälja en vara från $F_{3}$ till $L_{3}$. För att det ska vara lönsamt måste kostnaden vara $<0$ kr och alltså måste vi begära ett pris $<5$ kr/enhet.
+För att lösa denna uppgift används nodpriserna som står bredvid noderna i figur \ref{uppgiftb-graf}. De intressanta nodpriserna är de för noderna $F_{3}$ och $L_{3}$ vilka utläses från grafen till att vara $y_{F3} = 26$ respektive $y_{L3} = 31$. Kostnaden för bågen mellan dem utläses från tabell \ref{transportkostnader} till $c_{F3,L3} = 6$. Denna information används för att beräkna den reducerade kostnaden $\hat{c}_{F3,L3}$ för bågen i den slutgiltiga lösningen.
+
+\begin{displaymath}
+\hat{c}_{F3,L3} = c_{F3,L3} + y_{F3} - y_{L3} = 6 + 26 - 31 = 1 > 0
+\end{displaymath}
+
+Då den reducerade kostnaden $\hat{c}_{F3,L3} > 0$ så är det ej lönsamt att skicka flöde genom bågen. Om vi kan hitta ett värde på $c_{F3,L3}$ som ger att $\hat{c}_{F3,L3} < 0$ så blir bågen lönsam. Om $c_{F3,L3} = 5$ så får vi följande reducerad kostnad:
+
+\begin{displaymath}
+\hat{c}_{F3,L3} = c_{F3,L3} + y_{F3} - y_{L3} = 5 + 26 - 31 = 0
+\end{displaymath}
+
+Detta ger en övre gräns på kostnaden på bågen mellan $F_{3}$ och $L_{3}$. En transportkostnad på 5 kr mellan fabriken och lagret i fråga gör alltså att det går jämt upp för företaget. För att det ska löna sig för företaget måste kostnaden understiga 5 kr.
 
 \end{document}
