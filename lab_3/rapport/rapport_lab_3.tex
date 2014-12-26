@@ -150,53 +150,11 @@ Vi identifierar problemet som ett minkostnadsproblem i en tudelad acyklisk rikta
     \caption{Den identifierade grafen}
 \end{figure}
 
-Vi vill att bågkostnaderna i grafen ska innehålla både transportkostnader och kostnad vid försäljning. Vi ställer upp produktionskostnader och försäljningspris som radmatriser respektive kolumnmatriser och upprepar dessa 4 respektive 5 gånger så att vi får $4x5$-matriserna $P$ och $F$. Genom att subtrahera $F$ från $P$ och addera transportkostnadedsmatrisen $T$ från tabell \ref{transportkostnader} får vi så totalkostnadsmatrisen $R$ vars värden vi för in som kostnader på bågarna i grafen.
+Grafen består av tre delar. Bågarna till vänster mellan nod $S$ och $F_{n}$ innehåller information om fabrikernas tillverkningskostnad samt övre och undre gräns för antalet tillverkade enheter enligt tabell \ref{fabrik-egenskaper} och villkor \ref{bivillkor4}. Bågarna i mitten mellan $F_{n}$ och $L_{n}$ representerar transportkostnaderna mellan fabrik och lager enligt tabell \ref{transportkostnader}. Slutligen representerar bågarna till höger mellan noder $L_{n}$ och $D$ de olika övre och undre gränserna för efterfrågan samt försäljningspris för respektive lager enligt tabell \ref{lager-egenskaper} och villkor \ref{bivillkor2} och \ref{bivillkor3}. Försäljningspriset är en vinst och representeras därför som en negativ kostnad.
 
-\begin{displaymath}
-P - F + T = R
-\end{displaymath}
-\begin{displaymath}
-\Leftrightarrow
-\begin{pmatrix}
-     {25} & {25} & {25} & {25} & {25} \\
-     {27} & {27} & {27} & {27} & {27} \\
-     {26} & {26} & {26} & {26} & {26} \\
-     {28} & {28} & {28} & {28} & {28} \\
-\end{pmatrix}
--
-\begin{pmatrix}
-    {34} & {32} & {31} & {30} & {31} \\
-    {34} & {32} & {31} & {30} & {31} \\
-    {34} & {32} & {31} & {30} & {31} \\
-    {34} & {32} & {31} & {30} & {31} \\
-\end{pmatrix}
-+
-\begin{pmatrix}
-    {3} & {1} & {5} & {7} & {7} \\
-    {9} & {7} & {8} & {4} & {5} \\
-    {5} & {4} & {6} & {8} & {6} \\
-    {4} & {5} & {6} & {9} & {7} \\
-\end{pmatrix}
-\end{displaymath}
-\begin{displaymath}
-=
-\begin{pmatrix}
-    {-6} & {-6} & {-1} & {2} & {1} \\
-    {2} & {2} & {4} & {1} & {1} \\
-    {-3} & {-2} & {1} & {4} & {1} \\
-    {-2} & {1} & {3} & {7} & {4} \\
-\end{pmatrix}
-\end{displaymath}
+Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikrenas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten i $S$. Noderna $1$ och $2$ finns endast för estetiska skäl och bågarna däremellan har en kostnad på 0 kr. Det innebär att förutom det flöde som krävs för att uppfylla övriga villkor, kommer endast lönsamt flöde gå genom resten av grafen i enlighet med villkor \ref{bivillkor5}.
 
-Notera att vi använder kostnad, inte vinst i våra beräkningar vilket leder till att vinst representeras av ett negativt nummer. Alltså är de varor som transporteras via bågar med positiv kostnad i kostnadsmatrisen $R$ förlustaffärer.
-
-Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikrenas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten i $S$.
-
-Vi sätter de övre begränsningarna på bågarna från $S$ till $F_{n}$ till fabrikernas maxkapacitet och de undre till 60 enheter enligt villkor \ref{bivillkor4}. Vi sätter motsvarande begränsningar för lagren mellan $L_{n}$ och $D$.
-
-Noderna $1$ och $2$ finns endast för estetiska skäl och bågarna däremellan har en kostnad på 0 kr. Det innebär att förutom det flöde som krävs för att uppfylla övriga villkor, kommer endast lönsamt flöde gå genom resten av grafen i enlighet med villkor \ref{bivillkor5}.
-
-Noden $T$ är ett substitut för en parallell båge och är det alternativa, billigare transportsättet mellan $F_{2}$ och $L_{3}$ givet i villkor \ref{bivillkor1}. Vi får kostnaden för den genom att beräkna $p_{2}-f_{3}+3$.
+Noden $T$ är ett substitut för en parallell båge och är det alternativa, billigare transportsättet mellan $F_{2}$ och $L_{3}$ givet i villkor \ref{bivillkor1}.
 
 \section{Lösning deluppgift $a$}
 
@@ -212,12 +170,12 @@ För att ta reda på största möjliga vinst för företaget, löser vi den graf
     \begin{tabular}{ | l | l | l | l | l | l | }
         \hline
         {} & {$L_{1}$} & {$L_{2}$} & {$L_{3}$} & {$L_{4}$} & {$L_{5}$} \\\hline
-        {$F_{1}$} & {20} & {110} & {20} & {} & {} \\\hline
-        {$F_{2}$} & {} & {} & {25} & {80} & {16} \\\hline
-        {$F_{3}$} & {} & {} & {} & {} & {134} \\\hline
-        {$F_{4}$} & {60} & {} & {} & {} & {} \\\hline
+        {$F_{1}$} & {40} & {110} & {} & {} & {} \\\hline
+        {$F_{2}$} & {} & {} & {25} & {80} & {35} \\\hline
+        {$F_{3}$} & {} & {} & {} & {} & {115} \\\hline
+        {$F_{4}$} & {40} & {20} & {} & {} & {} \\\hline
     \end{tabular}
-    \caption{Transportkostnader från fabrik till lager angivet i kr/enhet.} \label{uppgifta-flode}
+    \caption{Flöde från fabrik till lager angivet i antal enheter} \label{uppgifta-flode}
 \end{table}
 
 \newpage
