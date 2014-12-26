@@ -175,7 +175,7 @@ För att ta reda på största möjliga vinst för företaget, löser vi den graf
         {$F_{3}$} & {} & {} & {} & {} & {115} \\\hline
         {$F_{4}$} & {40} & {20} & {} & {} & {} \\\hline
     \end{tabular}
-    \caption{Flöde från fabrik till lager angivet i antal enheter} \label{uppgifta-flode}
+    \caption{Flöde från fabrik till lager angivet i antal enheter.} \label{uppgifta-flode}
 \end{table}
 
 \newpage
@@ -189,9 +189,9 @@ För att lösa uppgiften måste vi modifiera grafen. Vi lägger till noderna $F_
     \begin{tabular}{ | l | l | l | l | }
         \hline
         {\textbf{Startnod}} & {\textbf{Kostnad}} & {\textbf{Maxflöde}} & {\textbf{Minflöde}} \\\hline
-        {$F_{2a}$} & {1} & {50} & {50} \\\hline
-        {$F_{2b}$} & {-2} & {100} & {10} \\\hline
-        {$F_{2c}$} & {1} & {$\infty$} & {0} \\\hline
+        {$F_{2a}$} & {28} & {50} & {50} \\\hline
+        {$F_{2b}$} & {25} & {100} & {10} \\\hline
+        {$F_{2c}$} & {28} & {$\infty$} & {0} \\\hline
     \end{tabular}
     \caption{Värden för nya bågar med $F_{2}$ som slutnod.} \label{uppgiftb-bagar}
 \end{table}
@@ -208,23 +208,16 @@ Vi löser sedan grafen och får ett resultat enligt figur \ref{uppgiftb-graf}. L
     \begin{tabular}{ | l | l | l | l | l | l | }
         \hline
         {} & {$L_{1}$} & {$L_{2}$} & {$L_{3}$} & {$L_{4}$} & {$L_{5}$} \\\hline
-        {$F_{1}$} & {20} & {110} & {20} & {} & {} \\\hline
+        {$F_{1}$} & {40} & {110} & {} & {} & {} \\\hline
         {$F_{2}$} & {} & {} & {25} & {80} & {45} \\\hline
-        {$F_{3}$} & {} & {} & {} & {} & {105} \\\hline
-        {$F_{4}$} & {60} & {} & {} & {} & {} \\\hline
+        {$F_{3}$} & {} & {} & {} & {} & {85} \\\hline
+        {$F_{4}$} & {40} & {} & {} & {} & {20} \\\hline
     \end{tabular}
-    \caption{Transportkostnader från fabrik till lager angivet i kr/enhet.} \label{uppgiftb-flode}
+    \caption{Flöde från fabrik till lager angivet i antal enheter.} \label{uppgiftb-flode}
 \end{table}
 
 \section{Lösning deluppgift $c$}
-
+\todo{Lös med nodpriser!}\newline
 Genom att studera matrisen $R$ ser vi att kostnaden är $1$ kr/enhet för att producera, transportera och sälja en vara från $F_{3}$ till $L_{3}$. För att det ska vara lönsamt måste kostnaden vara $<0$ kr och alltså måste vi begära ett pris $<5$ kr/enhet.
-
-\newpage
-\begin{appendices}
-{\ }\vspace{1mm}
-\section{MATLAB-script för lösning av kostnadsmatriser}
-\lstinputlisting{kostnad.m}
-\end{appendices}
 
 \end{document}
