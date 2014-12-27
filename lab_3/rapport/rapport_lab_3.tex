@@ -152,13 +152,13 @@ Vi identifierar problemet som ett minkostnadsproblem i en tudelad acyklisk rikta
 
 Grafen består av tre delar. Bågarna till vänster mellan nod $S$ och $F_{n}$ innehåller information om fabrikernas tillverkningskostnad samt övre och undre gräns för antalet tillverkade enheter enligt tabell \ref{fabrik-egenskaper} och villkor \ref{bivillkor4}. Bågarna i mitten mellan $F_{n}$ och $L_{n}$ representerar transportkostnaderna mellan fabrik och lager enligt tabell \ref{transportkostnader}. Slutligen representerar bågarna till höger mellan noder $L_{n}$ och $D$ de olika övre och undre gränserna för efterfrågan samt försäljningspris för respektive lager enligt tabell \ref{lager-egenskaper} och villkor \ref{bivillkor2} och \ref{bivillkor3}. Försäljningspriset är en vinst och representeras därför som en negativ kostnad.
 
-Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikrenas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten i $S$. Noderna $1$ och $2$ finns endast för estetiska skäl och bågarna däremellan har en kostnad på 0 kr. Det innebär att förutom det flöde som krävs för att uppfylla övriga villkor, kommer endast lönsamt flöde gå genom resten av grafen i enlighet med villkor \ref{bivillkor5}.
+Startnoden $S$ har en kapacitet som motsvarar summan av fabrikernas maxkapaciteter. Eftersom summan av fabrikernas maxkapaciteter är större än summan av lagrens efterfrågan, fungerar endast nätet om slutnoden $D$ har en efterfrågan lika stor som kapaciteten i $S$. Noderna $1$ och $2$ finns endast av estetiska skäl och bågarna däremellan har en kostnad på 0 kr. Det innebär att förutom det flöde som krävs för att uppfylla övriga villkor, kommer endast lönsamt flöde gå genom resten av grafen i enlighet med villkor \ref{bivillkor5}.
 
 Noden $T$ är ett substitut för en parallell båge och är det alternativa, billigare transportsättet mellan $F_{2}$ och $L_{3}$ givet i villkor \ref{bivillkor1}.
 
 \section{Lösning deluppgift $a$}
 
-För att ta reda på största möjliga vinst för företaget, löser vi den graf vi ritat upp. Lösningen illustreras i figur \ref{uppgifta-losning}. Svaret blir att största möjliga vinst är 715 kr med ettflöde enligt tabell \ref{uppgifta-flode}.
+För att ta reda på största möjliga vinst för företaget, löser vi den graf vi ritat upp. Lösningen illustreras i figur \ref{uppgifta-losning}. Svaret blir att största möjliga vinst är 715 kr med ett flöde enligt tabell \ref{uppgifta-flode}.
 
 \begin{figure}[h!]
 \centerline{\includegraphics[scale=0.65]{laborationsuppgift_13a_solved.ps}}
