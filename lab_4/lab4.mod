@@ -18,7 +18,8 @@ subject to two {j in 1..n}:
 solve;
 
 printf " *** Optimum ***\n";
-printf{i in 1..m, j in 1..n: x[i,j] > 0} "Flöde %d,%d = %d \n", i, j, x[i,j];
-printf{i in 1..m, y[i] > 0} "Fabrik %d byggs \n", i;
+printf "Kostnad v=%d\n", v;
+printf{i in 1..m, j in 1..n: x[i,j] > 0} "Flode %d,%d = %d \n", i, j, x[i,j];
+printf{i in 1..m: y[i] > 0} "Fabrik %d byggs \n", i;
 
 end;
