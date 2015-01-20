@@ -1,0 +1,3 @@
+antal variabler i P1: m * n + m
+antal bivillkor i P1: m + n
+antal bivillkor i P2: m * n + m + n
